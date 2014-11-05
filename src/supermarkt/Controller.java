@@ -1,3 +1,8 @@
+/*
+ * Dit is de main van de applicatie
+ * 
+ */
+
 public class Controller {
 
 	public int openKassa() {
