@@ -1,6 +1,6 @@
 /*
  * Dit is de main van de applicatie
- * Test Umit
+ * Yusuf
  */
 
 public class Controller {
