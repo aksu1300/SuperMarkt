@@ -1,6 +1,8 @@
 /*
  * Dit is de main van de applicatie
- * dit is Azad
+ * Yusuf
+ * Umit
+ * Yes
  */
 
 public class Controller {
