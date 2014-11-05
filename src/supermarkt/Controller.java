@@ -4,7 +4,7 @@
  * Umit
  * Yes
  * Azad push werkt
- * Umit nog een keer
+ * Umit push werkt
  */
 
 public class Controller {
