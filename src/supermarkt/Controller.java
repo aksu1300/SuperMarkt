@@ -1,6 +1,7 @@
 /*
  * Dit is de main van de applicatie
  * Yusuf
+ * Umit
  */
 
 public class Controller {
