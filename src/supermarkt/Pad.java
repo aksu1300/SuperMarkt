@@ -20,8 +20,12 @@ public class Pad {
         // Default constructor om de artikelen te initialiseren
         // Haal de Artikelen uit de database en zorg dat elke pad zijn 
         // eigen producten kent
-        public Pad()
+        // Ook wordt hier de naam van een pad verwacht
+        public Pad(String padNaam)
         {
+            // Geef de pad een padnaam
+            this.padNaam = padNaam;
+            
             // Wanneer er een pad wordt gemaakt moeten de 
             // Artikelen hier in staan
             this.artikelen = db.getArtikelen();

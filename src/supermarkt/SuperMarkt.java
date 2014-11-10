@@ -102,12 +102,12 @@ public class SuperMarkt {
          */
         
         // Creer een pad voor een Afdeling 
-        Pad zuivelPad = new Pad();
+        Pad zuivelPad = new Pad("Zuivel Pad");
         
         // We hebben een lijst met paden nodig
         List<Pad> paden = new ArrayList<Pad>();
         paden.add(zuivelPad);
-        
+
         // Maak een nieuwe personeel aan voor de kassa
         Personeel kassaPersoneel = new Personeel();
         kassaPersoneel.setNaam("Umit");
