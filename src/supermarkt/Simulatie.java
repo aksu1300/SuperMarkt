@@ -27,13 +27,12 @@ public class Simulatie {
     public Afdeling afdeling;
     // En meerdere klanten
     public List<Klant> klanten = new ArrayList<Klant>();
-    
-
+   
     
     // Default simulatie constructor to init the simulation
-    public Simulatie(Afdeling afdeling, List<Klant> klanten){
+    public Simulatie(Afdeling afdeling){
+        // De standaart simulatie heeft een afdeling nodig om mee te simuleren
         this.afdeling = afdeling;
-        this.klanten = klanten;
     }
     
     public Simulatie(Afdeling afdeling, int minKlanten, int maxKlanten){

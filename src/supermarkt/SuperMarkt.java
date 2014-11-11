@@ -21,12 +21,7 @@ public class SuperMarkt {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.printf("Welkom to Aldi\n");
-        /*
-         * 
-         * 
-         * Testen van de winkel
-         * 
-         */
+
         // Maak nieuwe pad aan 
         Pad pad = new Pad("Zuivel Pad");
         // Voeg pad aan de lijst toe
@@ -37,7 +32,7 @@ public class SuperMarkt {
         
         
         
-        // Open een afdeling en voeg de paden er aan toe
+        // Open een afdeling en voeg de paden er aan toe en doe 10 personelen erbij
         Afdeling afdeling = new Afdeling(paden,"Zuivel Afdeling",10);
         afdeling.kassa.setKassaPersoneel(afdeling.personelen.get(1));
         
@@ -46,10 +41,12 @@ public class SuperMarkt {
         System.out.println("Aantal personeelsleden:" + afdeling.personelen.get(1).getNaam());
         
         
-        List<Klant> klantenLijst = new ArrayList<Klant>();
-        
-        Simulatie simulatie = new Simulatie(afdeling, klantenLijst);
-        simulatie.startSimulatie();
-        
+        // De simulatie wil een afdeling de simulatie zorgt zelf voor random 
+        // Klanten die random actie ondernemen
+       Simulatie simulatie = new Simulatie(afdeling);
+       simulatie.startSimulatie();
+       
+       // Totaal verlopen tijd in miliseconden laten zien
+       System.out.println("Simulatie tijd:"+simulatie.eindTijd + " milisecoden");
     }
 }
