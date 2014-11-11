@@ -20,8 +20,15 @@ public class Simulatie {
     long eindTijd;
     
     // init de aantal mogelijke klanten
-    int minKlanten = 1;
-    int maxKlanten = 10;
+    int minKlanten = 10000;
+    int maxKlanten = 100000;
+    
+    // aantal verwerkte klanten
+    int aantalKlanten;
+    
+    int aantalMannen = 0;
+    int aantalMoeders = 0;
+    int aantalOuderen = 0;
     
     // Onze simulatie heeft een afdeling 
     public Afdeling afdeling;
@@ -36,7 +43,9 @@ public class Simulatie {
     }
     
     public Simulatie(Afdeling afdeling, int minKlanten, int maxKlanten){
-        
+        this.afdeling = afdeling;
+        this.minKlanten = minKlanten;
+        this.maxKlanten = maxKlanten;
     }
     
     // Start simulatie
@@ -63,14 +72,18 @@ public class Simulatie {
             switch(randTypeKlanten){
                 case 1:
                     klant = new Man();
+                    this.aantalMannen++;
                     System.out.println("randTypeKlanten:" + randTypeKlanten + " Voeg een man toe");
+                    
                     break;
                 case 2:
                     klant = new Moeder();
+                    this.aantalMoeders++;
                     System.out.println("randTypeKlanten:" + randTypeKlanten + " Voeg een Moeder toe");
                     break;
                 case 3:
                     klant = new Ouder();
+                    this.aantalOuderen++;
                     System.out.println("randTypeKlanten:" + randTypeKlanten + " Voeg een Ouder toe");
                     break;
                 default :
@@ -147,6 +160,8 @@ public class Simulatie {
         // Sla de eind tijd van de simulatie op 
         this.eindTijd = (System.nanoTime() - this.startTijd) / 1000000;
         
+        // De aantal verwerkte klanten in de simulatie zetten
+        this.aantalKlanten = randAantalKlanten;
     }
     
 }

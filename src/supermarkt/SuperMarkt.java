@@ -14,7 +14,6 @@ import java.util.List;
 public class SuperMarkt {
     
     
-    
     /**
      * @param args the command line arguments
      */
@@ -29,6 +28,7 @@ public class SuperMarkt {
         paden.add(pad);
         paden.add(new Pad("Poep Pad"));
         paden.add(new Pad("Media Pad"));
+        paden.add(new Pad("Drinken Pad"));
         
         
         
@@ -43,10 +43,18 @@ public class SuperMarkt {
         
         // De simulatie wil een afdeling de simulatie zorgt zelf voor random 
         // Klanten die random actie ondernemen
-       Simulatie simulatie = new Simulatie(afdeling);
+       Simulatie simulatie = new Simulatie(afdeling,10000,100000);
        simulatie.startSimulatie();
+       
+       // Aantal verwerkte klanten in de simulatie weergeven
+       System.out.println("Aantal klanten verwerkt:"+simulatie.aantalKlanten);
+       System.out.println("Moeder:"+simulatie.aantalMoeders);
+       System.out.println("Mannen:"+simulatie.aantalMannen);
+       System.out.println("Ouderen:"+simulatie.aantalOuderen);
        
        // Totaal verlopen tijd in miliseconden laten zien
        System.out.println("Simulatie tijd:"+simulatie.eindTijd + " milisecoden");
+       
+
     }
 }
