@@ -12,7 +12,7 @@ public class Klant {
         // Klant kan een pad lopen
         public void loopPad(Pad pad){
             // Laat klant een pad lopen
-            System.out.println("Klant loopt nu pad:" + pad.getPadNaam() );
+            System.out.println("Standaard Klant loopt nu pad:" + pad.getPadNaam() );
         }
     
         // Klant gaat afrekenen bij een kassa

@@ -2,7 +2,6 @@ package supermarkt;
 
 import java.util.ArrayList;
 import java.util.List;
-import supermarkt.Artikel;
 
 public class Pad {
         
@@ -14,7 +13,7 @@ public class Pad {
     
         
         // Elke pad heeft een of meerdere artikelen
-        public List<Artikel> artikelen = new ArrayList<Artikel>();
+        public List<Artikel> artikelen = new ArrayList<>();
         
         
         // Default constructor om de artikelen te initialiseren

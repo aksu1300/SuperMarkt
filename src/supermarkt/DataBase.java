@@ -15,8 +15,10 @@ public class DataBase extends HibernateUtil  {
             
         }
         
-        // Get a list of artikels
-        //
+        /**
+         * Get a list of artikels
+         * @return 
+         */
         public List<Artikel> getArtikelen(){
             // Create a transaction
             Transaction tx = session.beginTransaction();
@@ -30,6 +32,11 @@ public class DataBase extends HibernateUtil  {
         
         // Get one artikel from Database
         //
+        /**
+         * 
+         * @param id
+         * @return 
+         */
         public Artikel getArtikel(int id){
             // Create a transaction
             Transaction tx = session.beginTransaction();

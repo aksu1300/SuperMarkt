@@ -100,49 +100,29 @@ public class SuperMarkt {
          * Testen van de winkel
          * 
          */
-        
-        // Creer een pad voor een Afdeling 
-        Pad zuivelPad = new Pad("Zuivel Pad");
-        
-        // We hebben een lijst met paden nodig
+        // Maak nieuwe pad aan 
+        Pad pad = new Pad("Zuivel Pad");
+        // Voeg pad aan de lijst toe
         List<Pad> paden = new ArrayList<Pad>();
-        paden.add(zuivelPad);
-
-        // Maak een nieuwe personeel aan voor de kassa
-        Personeel kassaPersoneel = new Personeel();
-        kassaPersoneel.setNaam("Umit");
-        kassaPersoneel.setPersoneelsNummer(123454);
-        
-        // Elke afdeling heeft ook een kassa nodig
-        // Met een personeel dus voeg umit toe als kassamedewerker
-        Kassa kassa = new Kassa(kassaPersoneel);
-        
-        // Een afdeling openen
-        Afdeling afdeling = new Afdeling(paden, "LevensMiddelen", kassa);
-
-        
-        // Creer eerst een klant
-        Klant klant = new Klant();
-        
-        // Klant loopt een pad van een afdeling
-        klant.loopPad(afdeling.paden.get(0));
-        
-        // klant wil alle artikelen van dat afdeling zijn pad zien
-        afdeling.paden.get(0).showArtikelen();
-        
-        
-        // Klant vindt de artikelen erg mooi en neemt iets
-        klant.mandjeVullen(afdeling.paden.get(0).artikelen.get(0));
-        klant.mandjeVullen(afdeling.paden.get(0).artikelen.get(1));
-        klant.mandjeVullen(afdeling.paden.get(0).artikelen.get(0));
-        klant.mandjeVullen(afdeling.paden.get(0).artikelen.get(0));
-        
-        
-        // Klant wil graag afrekenen
-        klant.afrekenenArtikel(afdeling.kassa);
+        paden.add(pad);
+        paden.add(new Pad("Poep Pad"));
+        paden.add(new Pad("Media Pad"));
         
         
         
+        // Open een afdeling en voeg de paden er aan toe
+        Afdeling afdeling = new Afdeling(paden,"Zuivel Afdeling",10);
+        afdeling.kassa.setKassaPersoneel(afdeling.personelen.get(1));
+        
+        System.out.println("Aantal paden:"+afdeling.paden.size());
+        
+        System.out.println("Aantal personeelsleden:" + afdeling.personelen.get(1).getNaam());
+        
+        
+        List<Klant> klantenLijst = new ArrayList<Klant>();
+        
+        Simulatie simulatie = new Simulatie(afdeling, klantenLijst);
+        simulatie.startSimulatie();
         
     }
 }

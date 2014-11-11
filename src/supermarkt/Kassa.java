@@ -24,6 +24,7 @@ public class Kassa {
         // Klant kan artikelen afrekenen bij een kassa
         //
         public float afrekenen(List<Artikel> artikelen){
+            System.out.println("Aan het afrekenen bij de kassa");
             
             // De totale prijs
             float totaal = 0;
@@ -38,7 +39,7 @@ public class Kassa {
             }
             
             // Laat de bon aan klant zien 
-            System.out.println("Totaal:" + totaal);
+            System.out.println("Totaal afrekenen:" + totaal);
             
             // Geef het totale prijs terug
             return totaal;
