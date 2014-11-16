@@ -1,6 +1,6 @@
 package supermarkt;
 
-public class Moeder extends Klant {
+public class Moeder extends Klant  implements IKlant {
         // Klant kan een pad lopen
         public void loopPad(Pad pad){
             // Laat klant een pad lopen
